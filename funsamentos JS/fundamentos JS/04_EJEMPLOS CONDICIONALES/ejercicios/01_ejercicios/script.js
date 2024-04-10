@@ -1,15 +1,13 @@
-function identificarMayorEdad()
+function identificarMayor()
 {
-    let resultado = "";
-    //Identificar si es mayor o menor edad
-    let edad = prompt("Por favor ingrese su Edad: ");
+let num1 = parseFloat(prompt("Por favor ingrese el primer número: "));
+let num2 = parseFloat(prompt("Por favor ingrese el segundo número: "));
 
-    if(num1 > num2 ){
-        resultado = `Es mayor de Edad - tiene: <h2>${edad}</h2>`
-    } else {
-        resultado = `Es menor de Edad - tiene: <h2>${edad}</h2>`
-    }
-    document.getElementById(`lista`).innerHTML = resultado;
-
-
+let resultado;
+if (num1 > num2) {
+    resultado = `El primer número ${num1} es mayor que el segundo número ${num2}.`;
+} else if (num2 > num1) {
+    resultado = `El segundo número ${num2} es mayor que el primer número ${num1}.`;
+}
+document.getElementById(`lista`).innerHTML = resultado;
 } 
